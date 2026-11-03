@@ -1,0 +1,3959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Thames Luxury Charters | Private Event Boats on the Thames</title>
+  <meta name="description" content="Book a private luxury charter on the River Thames. Weddings, corporate events, Christmas parties and private dining since 1993. Three stunning vessels, up to 620 guests.">
+  <!-- =====================================================
+       SITE CONFIG: fill these in before launch
+       ===================================================== -->
+  <script>
+    window.TLC_CONFIG = {
+      /* Google Tag Manager container. Leave as GTM-XXXXXXX to disable. */
+      gtmId: 'GTM-XXXXXXX',
+
+      /* Where the enquiry form POSTs to (CRM webhook, Zapier, Make,
+         Formspree, etc). Sent as application/x-www-form-urlencoded.
+         Leave empty and the form shows a "not connected" notice. */
+      formEndpoint: '',
+
+      /* Optional: redirect here after a successful enquiry
+         (e.g. '/thank-you/'). Leave empty to show the inline thank-you. */
+      thankYouUrl: '',
+
+      /* HERO VIDEO
+         1. Self-hosted clip: add the file path(s) here when ready. It then
+            loads first, for everyone, and YouTube is never requested.
+            e.g. heroVideoMp4: 'videos/hero.mp4', heroVideoWebm: 'videos/hero.webm'
+         2. Until then, the YouTube video below plays as a lazy background
+            (desktop/tablet only, after the page loads, and only once the
+            visitor accepts advertising cookies). Otherwise the poster shows. */
+      heroVideoMp4: '',
+      heroVideoWebm: '',
+      heroYoutubeId: 'c2BPfA_SQHU',   // <-- CHANGE THIS: YouTube video ID for the hero background
+
+      /* Bump this if the cookie wording or categories change: re-asks everyone. */
+      consentVersion: 1
+    };
+  </script>
+
+  <!-- Consent Mode v2: everything denied until the visitor chooses.
+       Must run before GTM / any Google tag. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+
+    /* Returning visitor: apply their saved choice straight away */
+    (function () {
+      try {
+        var c = JSON.parse(localStorage.getItem('tlc-consent') || 'null');
+        var maxAge = 365 * 24 * 60 * 60 * 1000;
+        if (c && c.v === window.TLC_CONFIG.consentVersion && (Date.now() - c.ts) < maxAge) {
+          gtag('consent', 'update', {
+            analytics_storage: c.analytics ? 'granted' : 'denied',
+            ad_storage: c.marketing ? 'granted' : 'denied',
+            ad_user_data: c.marketing ? 'granted' : 'denied',
+            ad_personalization: c.marketing ? 'granted' : 'denied'
+          });
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Tag Manager (loads in consent-aware mode) -->
+  <script>
+    (function (w, d, s, l, i) {
+      if (!i || /X{4,}/.test(i)) return;
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', window.TLC_CONFIG.gtmId);
+  </script>
+
+  <!-- Hero poster is the LCP image: fetch it first -->
+  <link rel="preload" as="image" fetchpriority="high"
+        href="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/hero-dixie-queen.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===================================================
+       TLC Google Ads Landing Page v2
+       Palette: Navy #30315D, Gold #B18359, Body #3F4144
+       Fonts: Libre Baskerville (display), Montserrat (body)
+       Layout: Single-column, conversion-focused
+       =================================================== */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-navy: #30315D;
+      --color-navy-light: #3d3e6e;
+      --color-gold: #B18359;
+      --color-gold-light: #c9a07a;
+      --color-body: #3F4144;
+      --color-white: #FFFFFF;
+      --color-off-white: #F8F7F5;
+      --color-light-grey: #ECEAE6;
+      --color-border: #D9D5CF;
+      --color-overlay: rgba(48, 49, 93, 0.85);
+      --color-christmas: #8B1A1A;
+
+      /* Fixed tokens: never change between themes */
+      --color-on-dark: #FFFFFF;        /* text on navy / gold fills */
+      --color-brand-navy: #30315D;     /* solid navy fills */
+      --color-muted: #8a8a8a;          /* small meta text */
+
+      --font-display: 'Libre Baskerville', 'Georgia', serif;
+      --font-body: 'Montserrat', 'Helvetica Neue', sans-serif;
+
+      --section-gap: 80px;
+      --container-max: 1120px;
+      --gutter: 20px;
+      --radius: 5px;
+      --radius-lg: 8px;
+    }
+
+    /* ---- DARK MODE ---- */
+    [data-theme="dark"] {
+      --color-navy: #8b8cc6;
+      --color-navy-light: #a0a1d4;
+      --color-gold: #c9a07a;
+      --color-gold-light: #d9b898;
+      --color-body: #d4d4d8;
+      --color-white: #1a1a2e;
+      --color-off-white: #141425;
+      --color-light-grey: #2a2a42;
+      --color-border: #33334d;
+      --color-brand-navy: #3d3e78;
+      --color-muted: #9a9ab0;
+      color-scheme: dark;
+    }
+
+    [data-theme="dark"] .header {
+      background: #1a1a2e;
+      border-bottom-color: #2a2a42;
+    }
+
+    [data-theme="dark"] .header--scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    [data-theme="dark"] .btn--primary {
+      background: #4a4b8a;
+      color: #fff;
+    }
+    [data-theme="dark"] .btn--primary:hover { background: #5a5b9a; }
+
+    [data-theme="dark"] .hero,
+    [data-theme="dark"] .trust-bar,
+    [data-theme="dark"] .sale-banner {
+      background: #0f0f1f;
+    }
+
+    [data-theme="dark"] .hero__video-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 10, 24, 0.62) 0%,
+        rgba(10, 10, 24, 0.80) 100%
+      );
+    }
+
+    [data-theme="dark"] .christmas {
+      background: linear-gradient(135deg, #0a0a18 0%, #141430 50%, #0a0a18 100%);
+    }
+
+    [data-theme="dark"] .fleet-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+
+    [data-theme="dark"] .form__input,
+    [data-theme="dark"] .form__select,
+    [data-theme="dark"] .form__textarea {
+      background: #1e1e36;
+      color: #d4d4d8;
+      border-color: #33334d;
+    }
+
+    [data-theme="dark"] .form__input:focus,
+    [data-theme="dark"] .form__select:focus,
+    [data-theme="dark"] .form__textarea:focus {
+      border-color: #8b8cc6;
+      box-shadow: 0 0 0 3px rgba(139,140,198,0.15);
+    }
+
+    [data-theme="dark"] .form__input::placeholder { color: #666680; }
+
+    [data-theme="dark"] .btn--gold,
+    [data-theme="dark"] .christmas-card__badge {
+      color: #14142a;
+    }
+
+    [data-theme="dark"] .footer {
+      background: #0f0f1f;
+    }
+
+    [data-theme="dark"] .mobile-cta {
+      background: #1a1a2e;
+      border-top-color: #2a2a42;
+    }
+
+    [data-theme="dark"] .mobile-cta__btn--call {
+      background: #1e1e36;
+      color: #d4d4d8;
+      border-color: #33334d;
+    }
+
+    [data-theme="dark"] .mobile-cta__btn--enquire {
+      background: #4a4b8a;
+    }
+
+    [data-theme="dark"] .trust-bar__item {
+      border-right-color: rgba(255,255,255,0.05);
+    }
+
+    [data-theme="dark"] .usp-card__icon {
+      background: rgba(201,160,122,0.15);
+    }
+
+    [data-theme="dark"] .form__select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--color-body);
+      background: var(--color-white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul, ol { list-style: none; }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* ========================================
+       HEADER
+       ======================================== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-light-grey);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .header--scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header__logo img {
+      height: 54px;
+      width: auto;
+    }
+
+    .header__right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .header__phone {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-navy);
+      letter-spacing: 0.02em;
+    }
+
+    .header__phone svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-gold);
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: background 0.25s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn:active { transform: scale(0.97); }
+
+    .btn--primary {
+      background: var(--color-brand-navy);
+      color: var(--color-on-dark);
+    }
+
+    .btn--primary:hover { background: var(--color-navy-light); }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--color-navy);
+      border: 2px solid var(--color-navy);
+    }
+
+    .btn--outline:hover {
+      background: var(--color-brand-navy);
+      color: var(--color-on-dark);
+    }
+
+    .btn--gold {
+      background: var(--color-gold);
+      color: var(--color-on-dark);
+    }
+
+    .btn--gold:hover { background: var(--color-gold-light); }
+
+    .btn--lg {
+      padding: 16px 36px;
+      font-size: 15px;
+    }
+
+    .btn__icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+
+    .btn--ghost-white {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    .btn--ghost-white:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .hero {
+      position: relative;
+      padding-top: 68px;
+      background: var(--color-brand-navy);
+      overflow: hidden;
+    }
+
+    .hero__video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      max-height: 520px;
+      overflow: hidden;
+    }
+
+    .hero__media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+    }
+
+    .hero__video {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .hero__video--playing { opacity: 1; }
+
+    /* YouTube background: covers the hero at any shape, hidden until playing */
+    .hero__yt {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 1s ease;
+      container-type: size;
+    }
+
+    .hero__yt--playing { opacity: 1; }
+
+    .hero__yt iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 0;
+      /* fallback for browsers without container units */
+      width: 100%;
+      height: 100%;
+      /* cover: keep 16:9 and fill the box, zoomed a touch to crop YouTube edges */
+      width: max(100cqw, 177.78cqh);
+      height: max(100cqh, 56.25cqw);
+      transform: translate(-50%, -50%) scale(1.15);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero__video,
+      .hero__yt { display: none; }
+    }
+
+    .hero__video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(30, 31, 64, 0.55) 0%,
+        rgba(30, 31, 64, 0.70) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__content {
+      text-align: center;
+      color: var(--color-on-dark);
+      padding: 20px var(--gutter);
+      max-width: 720px;
+    }
+
+    .hero__badge {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #E8CBA8;                       /* fixed: always on the dark pill */
+      background: rgba(20, 20, 40, 0.6);
+      border: 1px solid rgba(232, 203, 168, 0.35);
+      padding: 7px 16px;
+      border-radius: 999px;
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      margin-bottom: 18px;
+    }
+
+    .hero__title,
+    .hero__subtitle {
+      text-shadow: 0 2px 16px rgba(10, 10, 30, 0.45);
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-on-dark);
+      margin-bottom: 16px;
+      text-wrap: balance;
+    }
+
+    .hero__subtitle {
+      font-size: clamp(14px, 1.6vw, 17px);
+      font-weight: 300;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 28px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero__ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========================================
+       TRUST BAR
+       ======================================== */
+    .trust-bar {
+      background: var(--color-brand-navy);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .trust-bar__inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .trust-bar__item {
+      text-align: center;
+      padding: 24px 12px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .trust-bar__item:last-child { border-right: none; }
+
+    /* Icon beside the figure: thin gold line icons (Lucide, ISC licence) */
+    .trust-bar__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .trust-bar__icon {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      fill: none;
+      stroke: #C9A07A;          /* fixed: the bar is navy in both themes */
+      stroke-width: 1.25;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.9;
+    }
+
+    .trust-bar__text { min-width: 0; }
+
+    /* tablet + phone (2x2 grid): divider between the two rows */
+    @media (max-width: 900px) {
+      .trust-bar__item:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      [data-theme="dark"] .trust-bar__item:nth-child(-n+2) {
+        border-bottom-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    /* phones: stack, small icon centred above the figure */
+    @media (max-width: 600px) {
+      .trust-bar__item {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+      .trust-bar__icon { width: 22px; height: 22px; }
+    }
+
+    .trust-bar__number {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      color: var(--color-gold);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .trust-bar__label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ========================================
+       SECTION TITLES
+       ======================================== */
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header__eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 12px;
+    }
+
+    .section-header__title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+
+    .section-header__rule {
+      width: 60px;
+      height: 2px;
+      background: var(--color-gold);
+      margin: 16px auto 0;
+      border: none;
+    }
+
+    /* ========================================
+       HOW IT WORKS (NEW)
+       ======================================== */
+    .process {
+      padding-block: 56px;
+      background: var(--color-off-white);
+    }
+
+    .process__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+
+    .process__step {
+      text-align: center;
+      position: relative;
+    }
+
+    .process__number {
+      width: 56px; height: 56px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: var(--color-brand-navy);
+      color: var(--color-gold);
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process__connector {
+      display: none;
+    }
+
+    .process__title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 6px;
+    }
+
+    .process__text {
+      font-size: 13.5px;
+      line-height: 1.55;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 700px) {
+      .process__connector {
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: -16px;
+        width: 32px;
+        height: 2px;
+        background: var(--color-border);
+      }
+      .process__step:last-child .process__connector { display: none; }
+    }
+
+    /* ========================================
+       FLEET
+       ======================================== */
+    .fleet {
+      padding-block: var(--section-gap);
+      background: var(--color-white);
+    }
+
+    .fleet__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .fleet-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .fleet-card:hover {
+      box-shadow: 0 8px 30px rgba(48, 49, 93, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .fleet-card__image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .fleet-card__body { padding: 24px; }
+
+    .fleet-card__capacity {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 6px;
+    }
+
+    .fleet-card__name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 10px;
+    }
+
+    .fleet-card__desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--color-body);
+      margin-bottom: 16px;
+    }
+
+    .fleet-card__specs {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .fleet-card__spec {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-navy);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .fleet-card__spec::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ========================================
+       USPs
+       ======================================== */
+    .usps {
+      padding-block: var(--section-gap);
+      background: var(--color-off-white);
+    }
+
+    .usps__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .usp-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: center;
+      border: 1px solid var(--color-border);
+    }
+
+    .usp-card__icon {
+      width: 48px; height: 48px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(177, 131, 89, 0.1);
+      border-radius: 50%;
+    }
+
+    .usp-card__icon svg {
+      width: 22px; height: 22px;
+      fill: var(--color-gold);
+    }
+
+    .usp-card__title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 8px;
+    }
+
+    .usp-card__text {
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       PHOTO GALLERY (NEW)
+       ======================================== */
+    .gallery {
+      padding-block: var(--section-gap);
+      background: var(--color-white);
+      overflow: hidden;
+    }
+
+    .gallery__strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+
+    .gallery__image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery__image:hover {
+      transform: scale(1.04);
+    }
+
+    /* ========================================
+       VIDEO SHOWCASE
+       ======================================== */
+    .showcase {
+      padding-block: var(--section-gap);
+      background: var(--color-off-white);
+    }
+
+    .showcase__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .showcase__video {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--color-brand-navy);
+    }
+
+    .showcase__video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Click-to-play YouTube facade: no YouTube scripts or cookies until pressed */
+    .yt-facade {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      cursor: pointer;
+      background: #0f0f1f;
+      display: block;
+    }
+
+    .yt-facade__thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease, opacity 0.3s ease;
+      opacity: 0.85;
+    }
+
+    .yt-facade:hover .yt-facade__thumb { transform: scale(1.03); opacity: 1; }
+
+    .yt-facade__play {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 68px; height: 68px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: rgba(20, 20, 40, 0.75);
+      border: 2px solid rgba(232, 203, 168, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .yt-facade__play svg {
+      width: 30px; height: 30px;
+      fill: #E8CBA8;
+      margin-left: 4px;
+    }
+
+    .yt-facade:hover .yt-facade__play,
+    .yt-facade:focus-visible .yt-facade__play {
+      background: #B18359;
+      transform: translate(-50%, -50%) scale(1.06);
+    }
+
+    .yt-facade:hover .yt-facade__play svg,
+    .yt-facade:focus-visible .yt-facade__play svg { fill: #fff; }
+
+    .yt-facade:focus-visible { outline: 3px solid #E8CBA8; outline-offset: -3px; }
+
+    .yt-facade__label {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 28px 18px 14px;
+      background: linear-gradient(transparent, rgba(10, 10, 24, 0.85));
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-align: left;
+    }
+
+    .showcase__note {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    /* ========================================
+       OCCASIONS
+       ======================================== */
+    .occasions {
+      padding-block: var(--section-gap);
+      background: var(--color-white);
+    }
+
+    .occasions__intro {
+      max-width: 560px;
+      margin: 14px auto 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Desktop: featured Christmas card spans two rows on the left */
+    .occasions__grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 1fr;
+      grid-auto-rows: minmax(330px, auto);
+      gap: 20px;
+    }
+
+    .occasion-tile {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-width: 0;
+      min-height: 250px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      isolation: isolate;
+      color: #fff;
+      /* shown if a photo is missing or still loading */
+      background: linear-gradient(150deg, #3d3e78 0%, #30315D 55%, #1d1e3d 100%);
+    }
+
+    .occasion-tile--featured { grid-row: span 2; min-height: 520px; }
+
+    .occasion-tile__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      color: transparent;
+      transition: transform .6s ease;
+    }
+
+    /* layer 1: light tint over the whole photo, tames bright skies */
+    .occasion-tile::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(14,14,32,.12) 0%, rgba(14,14,32,.35) 100%);
+    }
+
+    .occasion-tile:hover .occasion-tile__img,
+    .occasion-tile:focus-within .occasion-tile__img { transform: scale(1.05); }
+
+    .occasion-tile__badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #B18359;
+      color: #fff;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* layer 2: dark panel directly behind the text, fading in from above,
+       so text is readable whatever the photo and however tall the card */
+    .occasion-tile__body {
+      padding: 64px 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: linear-gradient(180deg,
+        rgba(14,14,32,0) 0,
+        rgba(14,14,32,.78) 64px,
+        rgba(14,14,32,.92) 100%);
+    }
+
+    .occasion-tile--featured .occasion-tile__body {
+      padding: 96px 30px 28px;
+      gap: 12px;
+      background: linear-gradient(180deg,
+        rgba(14,14,32,0) 0,
+        rgba(14,14,32,.72) 96px,
+        rgba(14,14,32,.9) 100%);
+    }
+
+    .occasion-tile__title,
+    .occasion-tile__text,
+    .occasion-tile__quote {
+      text-shadow: 0 1px 3px rgba(0,0,0,.45);
+    }
+
+    .occasion-tile__title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #fff;
+    }
+
+    .occasion-tile--featured .occasion-tile__title { font-size: clamp(24px, 2.6vw, 32px); }
+
+    .occasion-tile__text {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: rgba(255,255,255,.88);
+    }
+
+    .occasion-tile--featured .occasion-tile__text { font-size: 15px; max-width: 420px; }
+
+    .occasion-tile__points {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 4px 0 2px;
+    }
+
+    .occasion-tile__points li {
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(232,203,168,.45);
+      background: rgba(14,14,32,.35);
+      font-size: 12px;
+      font-weight: 500;
+      color: #E8CBA8;
+    }
+
+    .occasion-tile__quote {
+      margin-top: 2px;
+      padding-left: 12px;
+      border-left: 2px solid #E8CBA8;
+      font-size: 12.5px;
+      font-style: italic;
+      line-height: 1.5;
+      color: rgba(255,255,255,.85);
+    }
+
+    .occasion-tile__quote cite {
+      display: block;
+      margin-top: 3px;
+      font-style: normal;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #E8CBA8;
+    }
+
+    .occasion-tile__cta {
+      margin-top: 6px;
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .occasion-tile__cta svg { width: 16px; height: 16px; fill: currentColor; transition: transform .25s ease; }
+
+    .occasion-tile--featured .occasion-tile__cta {
+      padding: 13px 22px;
+      border-radius: var(--radius);
+      background: #B18359;
+    }
+
+    /* whole tile is clickable via the CTA's stretched hit area */
+    .occasion-tile__cta::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+    .occasion-tile__cta:focus-visible { outline: none; }
+    .occasion-tile:has(.occasion-tile__cta:focus-visible) { outline: 3px solid #E8CBA8; outline-offset: 3px; }
+    .occasion-tile:hover .occasion-tile__cta svg { transform: translateX(4px); }
+
+    /* Not-sure strip */
+    .occasions__help {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 22px 26px;
+      border-radius: var(--radius-lg);
+      background: var(--color-off-white);
+      border: 1px solid var(--color-border);
+    }
+
+    .occasions__help-text { min-width: 0; flex: 1 1 320px; }
+
+    .occasions__help-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 2px;
+    }
+
+    .occasions__help-sub { font-size: 14px; }
+
+    .occasions__swipe-hint { display: none; }
+
+    /* Tablet: 2 columns, featured card full width */
+    @media (max-width: 960px) {
+      .occasions__grid { grid-template-columns: 1fr 1fr; }
+      .occasion-tile--featured { grid-column: 1 / -1; grid-row: auto; min-height: 400px; }
+    }
+
+    /* Phone: featured card stays big, the rest become a swipeable row */
+    @media (max-width: 600px) {
+      .occasions__grid {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 16px;
+        margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+        padding-inline: max(16px, env(safe-area-inset-left, 0px));
+        padding-bottom: 6px;
+        scrollbar-width: none;
+      }
+      .occasions__grid::-webkit-scrollbar { display: none; }
+
+      .occasion-tile {
+        flex: 0 0 82%;
+        min-height: 380px;
+        scroll-snap-align: start;
+      }
+      .occasion-tile--featured { flex-basis: 88%; min-height: 440px; }
+      .occasion-tile__body { padding: 56px 18px 18px; }
+      .occasion-tile--featured .occasion-tile__body { padding: 72px 20px 22px; }
+      .occasion-tile--featured .occasion-tile__cta { width: 100%; justify-content: center; min-height: 44px; }
+
+      .occasions__swipe-hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 12px;
+        font-size: 12px;
+        color: var(--color-muted);
+      }
+      .occasions__swipe-hint svg { width: 16px; height: 16px; fill: currentColor; }
+
+      .occasions__help { padding: 20px; }
+      .occasions__help .btn { width: 100%; min-height: 44px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .occasion-tile__img, .occasion-tile__cta svg { transition: none; }
+    }
+
+    /* ========================================
+       CHRISTMAS PARTIES (NEW)
+       ======================================== */
+    .christmas {
+      padding-block: var(--section-gap);
+      background: linear-gradient(135deg, #1a1230 0%, var(--color-navy) 50%, #1a1230 100%);
+      color: var(--color-on-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .christmas::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(177,131,89,0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(177,131,89,0.06) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .christmas .section-header__title {
+      color: var(--color-on-dark);
+    }
+
+    .christmas__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      position: relative;
+    }
+
+    .christmas-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      backdrop-filter: blur(4px);
+    }
+
+    .christmas-card--featured {
+      border-color: var(--color-gold);
+    }
+
+    .christmas-card__badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--color-gold);
+      color: var(--color-on-dark);
+      padding: 4px 12px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+
+    .christmas-card__title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .christmas-card__text {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+
+    .christmas-card__features {
+      margin-bottom: 24px;
+    }
+
+    .christmas-card__feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      margin-bottom: 8px;
+    }
+
+    .christmas-card__feature::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .christmas__note {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-gold-light);
+      position: relative;
+    }
+
+    /* ========================================
+       WINTER SALE BANNER
+       ======================================== */
+    .sale-banner {
+      padding-block: 48px;
+      background: var(--color-brand-navy);
+      text-align: center;
+      color: var(--color-on-dark);
+    }
+
+    .sale-banner__eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 10px;
+    }
+
+    .sale-banner__title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .sale-banner__text {
+      font-size: 15px;
+      font-weight: 300;
+      opacity: 0.85;
+      margin-bottom: 20px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sale-banner__code {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px dashed var(--color-gold);
+      padding: 8px 24px;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--color-gold);
+      margin-bottom: 20px;
+    }
+
+    /* ========================================
+       GOOGLE REVIEWS / TESTIMONIALS
+       ======================================== */
+    .reviews {
+      padding-block: var(--section-gap);
+      background: var(--color-off-white);
+    }
+
+    .reviews__badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .reviews__badge-stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .reviews__badge-stars svg {
+      width: 20px; height: 20px;
+      fill: #FBBC04;
+    }
+
+    .reviews__badge-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-navy);
+    }
+
+    .reviews__badge-text span {
+      color: var(--color-body);
+      font-weight: 400;
+    }
+
+    .reviews__badge-google {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-body);
+    }
+
+    .reviews__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .review-card__header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .review-card__avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--color-brand-navy);
+      color: var(--color-on-dark);
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .review-card__name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-navy);
+    }
+
+    .review-card__meta {
+      font-size: 11px;
+      color: var(--color-muted);
+    }
+
+    .review-card__stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 12px;
+    }
+
+    .review-card__stars svg {
+      width: 14px; height: 14px;
+      fill: #FBBC04;
+    }
+
+    .review-card__quote {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-body);
+      flex: 1;
+    }
+
+    .reviews__cta {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .reviews__link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-navy);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .reviews__link:hover { color: var(--color-gold); }
+
+    /* ========================================
+       FAQ (NEW)
+       ======================================== */
+    .faq {
+      padding-block: var(--section-gap);
+      background: var(--color-white);
+    }
+
+    .faq__list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-item__question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-navy);
+      text-align: left;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .faq-item__question:hover { color: var(--color-gold); }
+
+    .faq-item__icon {
+      width: 24px; height: 24px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item__icon svg {
+      width: 24px; height: 24px;
+      fill: var(--color-gold);
+    }
+
+    .faq-item--open .faq-item__icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+
+    .faq-item--open .faq-item__answer {
+      max-height: 300px;
+    }
+
+    .faq-item__answer-inner {
+      padding-bottom: 20px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--color-body);
+    }
+
+    /* ========================================
+       ENQUIRY FORM
+       ======================================== */
+    .enquiry {
+      padding-block: var(--section-gap);
+      background: var(--color-off-white);
+    }
+
+    .enquiry__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .enquiry__info { padding-top: 12px; }
+
+    .enquiry__info-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .enquiry__info-text {
+      font-size: 15px;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .enquiry__contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .enquiry__contact-item svg {
+      width: 18px; height: 18px;
+      fill: var(--color-gold);
+      flex-shrink: 0;
+    }
+
+    .enquiry__contact-item a {
+      color: var(--color-navy);
+      font-weight: 600;
+    }
+
+    .enquiry__promise {
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: rgba(177, 131, 89, 0.08);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--color-gold);
+    }
+
+    .enquiry__promise p {
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .form {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+    }
+
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form__row--full { grid-template-columns: 1fr; }
+
+    .form__group { display: flex; flex-direction: column; }
+
+    .form__label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .form__input,
+    .form__select,
+    .form__textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-body);
+      background: var(--color-white);
+      transition: border-color 0.2s ease;
+      outline: none;
+    }
+
+    .form__input:focus,
+    .form__select:focus,
+    .form__textarea:focus {
+      border-color: var(--color-navy);
+      box-shadow: 0 0 0 3px rgba(48, 49, 93, 0.08);
+    }
+
+    .form__input::placeholder { color: #A9A7A3; }
+
+    .form__textarea { resize: vertical; min-height: 90px; }
+
+    .form__select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233F4144' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+
+    .form__submit { width: 100%; margin-top: 8px; }
+
+    .form__submit[disabled] { opacity: 0.7; cursor: wait; }
+
+    .form__error {
+      margin-top: 6px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #c0392b;
+    }
+
+    [data-theme="dark"] .form__error { color: #ff8a7a; }
+
+    .form__input--invalid,
+    .form__input--invalid:focus {
+      border-color: #c0392b;
+      box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+    }
+
+    .form__hp {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .form__hp input,
+    .form__hp label { width: 1px; height: 1px; padding: 0; border: 0; }
+
+    .form { position: relative; }
+
+    /* if the poster ever fails, don't print its alt text over the hero */
+    .hero__poster { color: transparent; }
+
+
+    .form__status {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      font-size: 13.5px;
+      line-height: 1.5;
+      background: #fdecea;
+      border: 1px solid #f1b0a8;
+      color: #8a1f12;
+    }
+
+    .form-success {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 40px 28px;
+      text-align: center;
+      outline: none;
+    }
+
+    .form-success__icon {
+      width: 56px; height: 56px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: #2e7d4f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-success__icon svg { width: 30px; height: 30px; fill: #fff; }
+
+    .form-success__title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      line-height: 1.3;
+      color: var(--color-navy);
+      margin-bottom: 10px;
+    }
+
+    .form-success__text { font-size: 14.5px; line-height: 1.6; }
+
+    .form__note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--color-muted);
+      margin-top: 12px;
+    }
+
+    /* ========================================
+       TRUST FOOTER
+       ======================================== */
+    .trust-footer {
+      padding-block: 32px;
+      background: var(--color-white);
+      border-top: 1px solid var(--color-light-grey);
+    }
+
+    .trust-footer__inner {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-footer__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-body);
+    }
+
+    .trust-footer__item svg {
+      width: 18px; height: 18px;
+      fill: var(--color-gold);
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background: var(--color-brand-navy);
+      padding: 36px 0 28px;
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+    }
+
+    .footer__logo {
+      height: 64px;
+      width: auto;
+      margin: 0 auto 14px;
+      opacity: 0.9;
+    }
+
+    .footer p { margin-bottom: 4px; }
+
+    .footer a {
+      color: var(--color-gold-light);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer__social {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+
+    .footer__social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      transition: background 0.25s ease;
+      text-decoration: none;
+    }
+
+    .footer__social a:hover {
+      background: rgba(177, 131, 89, 0.3);
+    }
+
+    .footer__social svg {
+      width: 18px; height: 18px;
+      fill: rgba(255,255,255,0.7);
+    }
+
+    /* ========================================
+       STICKY MOBILE CTA (NEW)
+       ======================================== */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 99;
+      background: var(--color-white);
+      border-top: 1px solid var(--color-light-grey);
+      box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
+      padding: 12px 16px;
+    }
+
+    .mobile-cta__inner {
+      display: flex;
+      gap: 10px;
+    }
+
+    .mobile-cta__btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .mobile-cta__icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+
+    .mobile-cta__btn--call .mobile-cta__icon { fill: var(--color-gold); }
+
+    .mobile-cta__btn--call {
+      background: var(--color-off-white);
+      color: var(--color-navy);
+      border: 1px solid var(--color-border);
+    }
+
+    .mobile-cta__btn--enquire {
+      background: var(--color-brand-navy);
+      color: var(--color-on-dark);
+    }
+
+    /* ========================================
+       RESPONSIVE
+       ======================================== */
+    @media (max-width: 900px) {
+      :root { --section-gap: 56px; }
+
+      .fleet__grid,
+      .reviews__grid,
+      .usps__grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .christmas__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase__grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .enquiry__layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .trust-bar__inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .trust-bar__item:nth-child(2) { border-right: none; }
+
+      .gallery__strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      :root { --section-gap: 44px; --gutter: 16px; }
+
+
+      .header__inner { height: 56px; }
+      .header__logo img { height: 40px; }
+      .header__phone { display: none; }
+      .header__right .btn { font-size: 12px; padding: 10px 18px; }
+
+      .hero { padding-top: 56px; }
+      .hero__video-wrap { aspect-ratio: 16 / 9; max-height: none; }
+      .hero__content { padding: 16px var(--gutter); }
+      .hero__badge { font-size: 10px; margin-bottom: 10px; }
+      .hero__subtitle { font-size: 13px; margin-bottom: 20px; }
+      .hero__ctas { flex-direction: column; align-items: center; }
+      .hero__ctas .btn { width: 100%; max-width: 280px; }
+
+      .btn--lg { padding: 14px 28px; font-size: 14px; }
+
+      .trust-bar__inner { grid-template-columns: repeat(2, 1fr); }
+      .trust-bar__item { padding: 16px 8px; }
+      .trust-bar__item:nth-child(2) { border-right: none; }
+      .trust-bar__label { font-size: 10px; }
+
+      .process__grid { grid-template-columns: 1fr; gap: 24px; }
+
+      .gallery__strip { grid-template-columns: repeat(3, 1fr); }
+
+      .form { padding: 24px 18px; }
+      .form__row { grid-template-columns: 1fr; }
+
+      .trust-footer__inner { gap: 20px; }
+
+      .mobile-cta { display: block; }
+    }
+
+    /* ========================================
+       DARK MODE TOGGLE
+       ======================================== */
+    .dark-toggle {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-off-white);
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .dark-toggle:hover { background: var(--color-light-grey); }
+
+    .dark-toggle svg { width: 18px; height: 18px; fill: var(--color-gold); }
+
+    .dark-toggle__moon { display: block; }
+    .dark-toggle__sun { display: none; }
+
+    [data-theme="dark"] .dark-toggle__moon { display: none; }
+    [data-theme="dark"] .dark-toggle__sun { display: block; }
+
+    /* ========================================
+       BACK TO TOP
+       ======================================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 90;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--color-brand-navy);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+    }
+
+    .back-to-top--visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover { background: var(--color-navy-light); }
+
+    .back-to-top svg {
+      width: 20px; height: 20px;
+      fill: #fff;
+    }
+
+    [data-theme="dark"] .back-to-top {
+      background: #4a4b8a;
+    }
+    [data-theme="dark"] .back-to-top:hover { background: #5a5b9a; }
+
+    @media (max-width: 600px) {
+      .back-to-top { bottom: 88px; right: 16px; }
+    }
+
+    /* ========================================
+       COOKIE CONSENT
+       ======================================== */
+    [hidden] { display: none !important; }
+
+    .cookie-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.85);
+      padding: 16px 20px;
+      display: block;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    }
+
+    .cookie-bar__text strong { color: #fff; }
+
+    .cookie-bar__btn--link {
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .cookie-bar__btn--link:hover { color: #fff; }
+
+    .cookie-bar__btn:focus-visible,
+    .switch__input:focus-visible + .switch__track {
+      outline: 3px solid #E8CBA8;
+      outline-offset: 2px;
+    }
+
+    /* ---- Preferences modal ---- */
+    .cookie-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(10, 10, 24, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .cookie-modal__panel {
+      width: 100%;
+      max-width: 520px;
+      max-height: calc(100vh - 32px);
+      overflow-y: auto;
+      background: var(--color-white);
+      color: var(--color-body);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .cookie-modal__title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--color-navy);
+      margin-bottom: 8px;
+    }
+
+    .cookie-modal__intro { font-size: 14px; margin-bottom: 16px; }
+
+    .cookie-modal__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .cookie-modal__info { min-width: 0; }
+
+    .cookie-modal__name {
+      display: block;
+      font-weight: 600;
+      color: var(--color-navy);
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .cookie-modal__desc { font-size: 13px; line-height: 1.5; }
+
+    .cookie-modal__always {
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-gold);
+    }
+
+    .cookie-modal__actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .cookie-modal__actions .cookie-bar__btn { flex: 1; min-height: 44px; }
+
+    .cookie-bar__btn.cookie-bar__btn--outline {
+      background: transparent;
+      color: var(--color-navy);
+      border: 2px solid var(--color-navy);
+    }
+
+    /* ---- Toggle switch ---- */
+    .switch {
+      position: relative;
+      flex-shrink: 0;
+      width: 48px;
+      height: 28px;
+      cursor: pointer;
+    }
+
+    .switch__input {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .switch__track {
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: #b9b6b0;
+      transition: background 0.2s ease;
+    }
+
+    .switch__track::after {
+      content: '';
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease;
+    }
+
+    .switch__input:checked + .switch__track { background: #B18359; }
+    .switch__input:checked + .switch__track::after { transform: translateX(20px); }
+
+    .cookie-bar__inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-bar__text {
+      font-size: 13px;
+      line-height: 1.5;
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .cookie-bar__text a {
+      color: #c9a07a;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .cookie-bar__actions {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .cookie-bar__btn {
+      padding: 8px 20px;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s ease;
+    }
+
+    .cookie-bar__btn--accept {
+      background: #B18359;
+      color: #fff;
+    }
+    .cookie-bar__btn--accept:hover { background: #c9a07a; }
+
+    @media (max-width: 600px) {
+      .cookie-bar__inner { flex-direction: column; text-align: left; align-items: stretch; }
+      .cookie-bar__actions { width: 100%; flex-wrap: wrap; }
+      .cookie-bar__actions .cookie-bar__btn--accept { flex: 1 1 40%; }
+      .cookie-bar__actions .cookie-bar__btn--link { flex: 1 1 100%; }
+      .cookie-modal { align-items: flex-end; padding: 0; }
+      .cookie-modal__panel {
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        max-height: 90vh;
+        padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+      }
+    }
+
+    /* ========================================
+       MOBILE FIXES (kept last so they win the cascade)
+       ======================================== */
+
+    /* Grids: let columns shrink below their content's natural width */
+    .christmas__grid,
+    .fleet__grid,
+    .usps__grid,
+    .reviews__grid,
+    .occasions__grid,
+    .showcase__grid,
+    .enquiry__layout { min-width: 0; }
+
+    .christmas-card,
+    .fleet-card,
+    .review-card,
+    .usp-card,
+    .form,
+    .form__group { min-width: 0; }
+
+    /* Footer links: bigger hit area without changing the look */
+    .footer p a {
+      display: inline-block;
+      padding-block: 10px;
+    }
+
+    .enquiry__contact-item { min-height: 44px; margin-bottom: 4px; }
+
+    .christmas-card__title,
+    .fleet-card__name,
+    .usp-card__title,
+    .process__title { line-height: 1.3; }
+
+    .mobile-cta__btn { white-space: nowrap; }
+
+    @media (max-width: 360px) {
+      .mobile-cta__btn {
+        font-size: 13px;
+        padding: 14px 8px;
+        gap: 6px;
+        letter-spacing: 0.02em;
+      }
+      .mobile-cta__icon { width: 16px; height: 16px; }
+    }
+    .enquiry__contact-item a { padding-block: 10px; word-break: break-word; }
+
+    .header__phone { padding-block: 10px; }
+
+    /* Tablet and phone: hero grows to fit its content, video covers it */
+    @media (max-width: 1024px) {
+      .dark-toggle { width: 42px; height: 42px; }
+      .cookie-bar__btn { min-height: 42px; }
+    }
+
+    @media (max-width: 900px) {
+      .christmas__grid { grid-template-columns: minmax(0, 1fr); }
+
+      .hero__video-wrap {
+        aspect-ratio: auto;
+        max-height: none;
+        height: auto;
+        min-height: 480px;
+      }
+
+      /* overlay sits in normal flow, so its content sets the height */
+      .hero__video-overlay {
+        position: relative;
+        inset: auto;
+        min-height: 480px;
+        padding-block: 40px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+      /* Header: comfortable tap targets, still fits at 320px */
+      .header__right { gap: 10px; }
+      .dark-toggle { width: 44px; height: 44px; }
+      .header__right .btn {
+        min-height: 44px;
+        padding: 10px 14px;
+      }
+
+      .hero__video-wrap,
+      .hero__video-overlay { min-height: 520px; }
+      .hero__badge {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        padding: 6px 12px;
+      }
+      .hero__title { font-size: 26px; }
+
+      /* Buttons may wrap rather than overflow on very narrow screens */
+      .btn { white-space: normal; text-align: center; }
+
+      .christmas-card { padding: 24px 18px; }
+      .christmas-card .btn { width: 100%; }
+
+      .fleet-card__body { padding: 20px 18px; }
+      .fleet-card .btn { width: 100%; }
+
+      .sale-banner__code {
+        font-size: 14px;
+        padding: 8px 16px;
+        max-width: 100%;
+        word-break: break-all;
+      }
+
+      .faq-item__question { font-size: 14px; min-height: 56px; }
+
+      /* iOS date input otherwise renders wider than its column */
+      .form__input[type="date"] {
+        -webkit-appearance: none;
+        appearance: none;
+        min-height: 42px;
+        max-width: 100%;
+      }
+
+      /* Inputs at 16px stop iOS Safari zooming in on focus */
+      .form__input,
+      .form__select,
+      .form__textarea { font-size: 16px; }
+
+      /* Sticky CTA respects the iPhone home bar */
+      .mobile-cta {
+        padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      }
+      /* room for the sticky bar inside the footer, so the navy runs underneath it */
+      .footer { padding-bottom: calc(28px + 84px + env(safe-area-inset-bottom, 0px)); }
+
+      /* Cookie bar sits over the CTA bar until dismissed, no overlap */
+      .cookie-bar {
+        bottom: 0;
+        padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      }
+      .cookie-bar__btn { min-height: 44px; flex: 1; }
+      .cookie-bar__actions { gap: 10px; }
+
+      .back-to-top {
+        bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+        right: 16px;
+      }
+
+      .trust-footer__inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .header__logo img { height: 36px; }
+      .header__right .btn { font-size: 11px; padding: 10px 10px; }
+      .hero__ctas .btn { max-width: none; }
+    }
+
+    /* ---- Fade-in on scroll ---- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM noscript fallback: replace GTM-XXXXXXX with the real container ID -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo" aria-label="Thames Luxury Charters">
+        <img src="data:image/png;base64,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" alt="Thames Luxury Charters, celebrating 30 years" width="102" height="106">
+      </a>
+      <div class="header__right">
+        <a href="tel:02073577751" class="header__phone">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.49a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+          020 7357 7751
+        </a>
+        <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+          <svg class="dark-toggle__moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+          <svg class="dark-toggle__sun" viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+        </button>
+        <a href="#enquire" class="btn btn--primary">Enquire Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__video-wrap">
+      <!-- Poster shows instantly (LCP). The clip loads after the page,
+           and only on connections/devices where that makes sense. -->
+      <img
+        class="hero__media hero__poster"
+        src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/hero-dixie-queen.jpg"
+        alt="The Dixie Queen paddle steamer on the River Thames"
+        width="1920" height="1080"
+        fetchpriority="high"
+        decoding="async"
+      >
+      <video
+        class="hero__media hero__video"
+        id="hero-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        aria-hidden="true"
+        tabindex="-1"
+      ></video>
+      <!-- YouTube background is injected here (lazy, consent-gated) -->
+      <div class="hero__yt" id="hero-yt" aria-hidden="true"></div>
+      <div class="hero__video-overlay">
+        <div class="hero__content">
+          <span class="hero__badge">Private charter vessels, River Thames, Est. 1993</span>
+          <h1 class="hero__title">Luxury boats for unforgettable events on the Thames</h1>
+          <p class="hero__subtitle">Step aboard our fleet of beautifully appointed vessels and discover a quiet sanctuary in central London, gliding past Tower Bridge for parties, weddings and corporate events.</p>
+          <div class="hero__ctas">
+            <a href="#enquire" class="btn btn--gold btn--lg">
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+              Request a Quote
+            </a>
+            <a href="#fleet" class="btn btn--ghost-white btn--lg">
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.15.52-.06.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"/></svg>
+              Explore the Fleet
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__inner">
+        <div class="trust-bar__item">
+          <svg class="trust-bar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="3"/><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
+          <div class="trust-bar__text">
+            <div class="trust-bar__number">33</div>
+            <div class="trust-bar__label">Years on the Thames</div>
+          </div>
+        </div>
+        <div class="trust-bar__item">
+          <svg class="trust-bar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg>
+          <div class="trust-bar__text">
+            <div class="trust-bar__number">3</div>
+            <div class="trust-bar__label">Signature Vessels</div>
+          </div>
+        </div>
+        <div class="trust-bar__item">
+          <svg class="trust-bar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="trust-bar__text">
+            <div class="trust-bar__number">620</div>
+            <div class="trust-bar__label">Guests at Capacity</div>
+          </div>
+        </div>
+        <div class="trust-bar__item">
+          <svg class="trust-bar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+          <div class="trust-bar__text">
+            <div class="trust-bar__number">432</div>
+            <div class="trust-bar__label">Fine-dining Covers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="process">
+    <div class="container">
+      <div class="process__grid">
+        <div class="process__step fade-in">
+          <div class="process__number">1</div>
+          <div class="process__connector"></div>
+          <h3 class="process__title">Enquire</h3>
+          <p class="process__text">Tell us about your occasion. No obligation, no pressure. We respond within one working day.</p>
+        </div>
+        <div class="process__step fade-in">
+          <div class="process__number">2</div>
+          <div class="process__connector"></div>
+          <h3 class="process__title">Plan</h3>
+          <p class="process__text">Your dedicated event manager crafts a tailored proposal: vessel, menu, entertainment and timeline.</p>
+        </div>
+        <div class="process__step fade-in">
+          <div class="process__number">3</div>
+          <h3 class="process__title">Celebrate</h3>
+          <p class="process__text">Step aboard and enjoy. We handle every detail on the day so you can be with your guests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLEET ===== -->
+  <section class="fleet" id="fleet">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__eyebrow">The Fleet</span>
+        <h2 class="section-header__title">Three distinguished boats, each with its own character</h2>
+        <hr class="section-header__rule">
+      </div>
+      <div class="fleet__grid">
+        <div class="fleet-card fade-in">
+          <img class="fleet-card__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/boat-dixie.jpg" alt="The Dixie Queen paddle steamer on the River Thames" width="400" height="300" loading="lazy">
+          <div class="fleet-card__body">
+            <div class="fleet-card__capacity">Up to 620 guests</div>
+            <h3 class="fleet-card__name">The Dixie Queen</h3>
+            <p class="fleet-card__desc">London's largest luxury charter boat. A magnificent paddle steamer, and the only vessel that requires Tower Bridge to lift to let her pass.</p>
+            <div class="fleet-card__specs">
+              <span class="fleet-card__spec">Fine dining for 432</span>
+              <span class="fleet-card__spec">Two bars</span>
+              <span class="fleet-card__spec">Dance floor</span>
+            </div>
+            <a href="#enquire" class="btn btn--primary">Enquire</a>
+          </div>
+        </div>
+        <div class="fleet-card fade-in">
+          <img class="fleet-card__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/boat-elizabethan.jpg" alt="The Elizabethan paddle steamer" width="400" height="300" loading="lazy">
+          <div class="fleet-card__body">
+            <div class="fleet-card__capacity">Up to 235 guests</div>
+            <h3 class="fleet-card__name">The Elizabethan</h3>
+            <p class="fleet-card__desc">A beautiful stern-wheeled Mississippi paddle steamer with elegant open decks and refined interiors. Ideal for weddings, dinners and private parties.</p>
+            <div class="fleet-card__specs">
+              <span class="fleet-card__spec">Fine dining for 140</span>
+              <span class="fleet-card__spec">Two bars</span>
+              <span class="fleet-card__spec">Open upper deck</span>
+            </div>
+            <a href="#enquire" class="btn btn--primary">Enquire</a>
+          </div>
+        </div>
+        <div class="fleet-card fade-in">
+          <img class="fleet-card__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/Edwardian-2-scaled.jpg" alt="The Edwardian luxury charter boat" width="400" height="300" loading="lazy">
+          <div class="fleet-card__body">
+            <div class="fleet-card__capacity">Up to 90 guests</div>
+            <h3 class="fleet-card__name">The Edwardian</h3>
+            <p class="fleet-card__desc">The epitome of British style. A star of the Queen's Diamond Jubilee River Pageant, perfect for intimate, exclusive events.</p>
+            <div class="fleet-card__specs">
+              <span class="fleet-card__spec">Fine dining for 60</span>
+              <span class="fleet-card__spec">One bar</span>
+              <span class="fleet-card__spec">Open &amp; covered decks</span>
+            </div>
+            <a href="#enquire" class="btn btn--primary">Enquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== USPs ===== -->
+  <section class="usps">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__eyebrow">Why Choose Us</span>
+        <h2 class="section-header__title">Everything your event needs, already aboard</h2>
+        <hr class="section-header__rule">
+      </div>
+      <div class="usps__grid">
+        <div class="usp-card fade-in">
+          <div class="usp-card__icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3 class="usp-card__title">Exclusive Hire</h3>
+          <p class="usp-card__text">The boat is exclusively yours. No shared spaces, no competing noise. A floating venue where every corner belongs to your guests.</p>
+        </div>
+        <div class="usp-card fade-in">
+          <div class="usp-card__icon"><svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg></div>
+          <h3 class="usp-card__title">Catering by FoodbyDish</h3>
+          <p class="usp-card__text">Delicate, seasonal menus prepared and served on board, with carefully matched fine wines to complement every course.</p>
+        </div>
+        <div class="usp-card fade-in">
+          <div class="usp-card__icon"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>
+          <h3 class="usp-card__title">Entertainment</h3>
+          <p class="usp-card__text">DJ, live singer, photo booth, AV screens and microphones. Add the Tower Bridge lift on the Dixie Queen for a showstopping arrival.</p>
+        </div>
+        <div class="usp-card fade-in">
+          <div class="usp-card__icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <h3 class="usp-card__title">Central London Piers</h3>
+          <p class="usp-card__text">Board at Butler's Wharf Pier, moments from the City and Canary Wharf. No taxis to a remote venue required.</p>
+        </div>
+        <div class="usp-card fade-in">
+          <div class="usp-card__icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+          <h3 class="usp-card__title">Dedicated Event Manager</h3>
+          <p class="usp-card__text">Your event manager plans every detail and stays on board throughout. An experienced in-house crew, never subcontracted.</p>
+        </div>
+        <div class="usp-card fade-in">
+          <div class="usp-card__icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+          <h3 class="usp-card__title">Fully Licensed &amp; Insured</h3>
+          <p class="usp-card__text">Over 33 years of safe, professionally run charters on the Thames. A reputation built on trust and repeat bookings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHOTO GALLERY ===== -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__eyebrow">The Experience</span>
+        <h2 class="section-header__title">A luxury charter experience</h2>
+        <hr class="section-header__rule">
+      </div>
+      <div class="gallery__strip fade-in">
+        <img class="gallery__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/09/220928_TLC_976-scaled.jpg" alt="Event aboard TLC vessel" loading="lazy" width="300" height="300">
+        <img class="gallery__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/event-party.jpg" alt="Party on the Thames" loading="lazy" width="300" height="300">
+        <img class="gallery__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/09/220928_TLC_691-scaled.jpg" alt="Fine dining aboard" loading="lazy" width="300" height="300">
+        <img class="gallery__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/09/220928_TLC_522-scaled.jpg" alt="Guests enjoying the Thames" loading="lazy" width="300" height="300">
+        <img class="gallery__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/09/220928_TLC_434-scaled.jpg" alt="Tower Bridge from the deck" loading="lazy" width="300" height="300">
+        <img class="gallery__image" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/009.jpg" alt="Celebration on the river" loading="lazy" width="300" height="300">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO SHOWCASE ===== -->
+  <section class="showcase">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__eyebrow">See For Yourself</span>
+        <h2 class="section-header__title">Step aboard our luxury fleet</h2>
+        <hr class="section-header__rule">
+      </div>
+      <div class="showcase__grid fade-in">
+        <div class="showcase__video">
+          <button class="yt-facade" type="button" data-yt-id="c2BPfA_SQHU" data-yt-title="Thames Luxury Charters: the fleet">
+            <img class="yt-facade__thumb" src="https://i.ytimg.com/vi/c2BPfA_SQHU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+            <span class="yt-facade__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+            <span class="yt-facade__label">Watch: the fleet</span>
+            <span class="sr-only">Play video: Thames Luxury Charters, the fleet</span>
+          </button>
+        </div>
+        <div class="showcase__video">
+          <button class="yt-facade" type="button" data-yt-id="NB3JYEyZ7Hg" data-yt-title="Thames Luxury Charters: events on board">
+            <img class="yt-facade__thumb" src="https://i.ytimg.com/vi/NB3JYEyZ7Hg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+            <span class="yt-facade__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+            <span class="yt-facade__label">Watch: events on board</span>
+            <span class="sr-only">Play video: Thames Luxury Charters, events on board</span>
+          </button>
+        </div>
+      </div>
+      <p class="showcase__note">Videos play from YouTube in privacy-enhanced mode and only load when you press play.</p>
+    </div>
+  </section>
+
+  <!-- ===== OCCASIONS ===== -->
+  <section class="occasions" id="occasions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__eyebrow">For every celebration</span>
+        <h2 class="section-header__title">What are you celebrating?</h2>
+        <hr class="section-header__rule">
+        <p class="occasions__intro">Pick your occasion and we'll tailor the boat, menu and running order to it. Every charter is exclusively yours.</p>
+      </div>
+
+      <div class="occasions__grid" role="list">
+
+        <!-- Featured: in season -->
+        <article class="occasion-tile occasion-tile--featured" role="listitem">
+          <img class="occasion-tile__img" onerror="this.remove()" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/09/220928_TLC_691-scaled.jpg" alt="Guests dining aboard a Thames Luxury Charters boat" loading="lazy" decoding="async" width="1200" height="1400">
+          <span class="occasion-tile__badge">Now booking December</span>
+          <div class="occasion-tile__body">
+            <h3 class="occasion-tile__title">Christmas Parties</h3>
+            <p class="occasion-tile__text">Festive dinners and dancing beneath London's winter skyline. Book a whole boat for your company, or join a shared party night with a smaller team.</p>
+            <ul class="occasion-tile__points">
+              <li>Exclusive or shared</li>
+              <li>Festive menus</li>
+              <li>Mulled wine welcome</li>
+              <li>25% deposit secures your date</li>
+            </ul>
+            <a class="occasion-tile__cta" href="#enquire" data-occasion="christmas">
+              Check December dates
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="occasion-tile" role="listitem">
+          <img class="occasion-tile__img" onerror="this.remove()" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/09/220928_TLC_976-scaled.jpg" alt="Corporate guests on board on the Thames" loading="lazy" decoding="async" width="800" height="600">
+          <div class="occasion-tile__body">
+            <h3 class="occasion-tile__title">Corporate &amp; Team Events</h3>
+            <p class="occasion-tile__text">Client dinners, launches, summer socials and away-days with a backdrop nobody forgets.</p>
+            <blockquote class="occasion-tile__quote">"I hosted my corporate event on the Elizabethan with Thames Luxury Charters, and it was an absolute success."<cite>Yousra S, Google review</cite></blockquote>
+            <a class="occasion-tile__cta" href="#enquire" data-occasion="corporate">
+              Plan a corporate event
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="occasion-tile" role="listitem">
+          <img class="occasion-tile__img" onerror="this.remove()" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/boat-elizabethan.jpg" alt="The Elizabethan paddle steamer, a popular wedding venue" loading="lazy" decoding="async" width="800" height="600">
+          <div class="occasion-tile__body">
+            <h3 class="occasion-tile__title">Weddings</h3>
+            <p class="occasion-tile__text">Receptions and celebrations afloat, with our events team liaising with your suppliers.</p>
+            <blockquote class="occasion-tile__quote">"We had an amazing wedding celebration aboard the Elizabethan!"<cite>Gustav W, Google review</cite></blockquote>
+            <a class="occasion-tile__cta" href="#enquire" data-occasion="wedding">
+              Plan your wedding
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="occasion-tile" role="listitem">
+          <img class="occasion-tile__img" onerror="this.remove()" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/event-party.jpg" alt="Guests dancing at a party on the Thames" loading="lazy" decoding="async" width="800" height="600">
+          <div class="occasion-tile__body">
+            <h3 class="occasion-tile__title">Thames Parties</h3>
+            <p class="occasion-tile__text">Birthdays, anniversaries and milestone nights, with a DJ, live music or a photo booth.</p>
+            <blockquote class="occasion-tile__quote">"The whole experience was absolutely brilliant from start to finish."<cite>Olivia, Google review</cite></blockquote>
+            <a class="occasion-tile__cta" href="#enquire" data-occasion="party">
+              Plan a party
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="occasion-tile" role="listitem">
+          <img class="occasion-tile__img" onerror="this.remove()" src="https://events.thamesluxurycharters.co.uk/wp-content/uploads/2026/08/Edwardian-2-scaled.jpg" alt="The Edwardian, an intimate venue for private dining" loading="lazy" decoding="async" width="800" height="600">
+          <div class="occasion-tile__body">
+            <h3 class="occasion-tile__title">Private Dining</h3>
+            <p class="occasion-tile__text">Long lunches and intimate suppers for smaller groups, served as you cruise.</p>
+            <blockquote class="occasion-tile__quote">"My birthday lunch for 30 guests on MV The Edwardian was the most spectacular success."<cite>Maggie H, Google review</cite></blockquote>
+            <a class="occasion-tile__cta" href="#enquire" data-occasion="private-dining">
+              Plan a private dinner
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="occasions__swipe-hint" aria-hidden="true">
+        Swipe for more occasions
+        <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </p>
+
+      <div class="occasions__help">
+        <div class="occasions__help-text">
+          <div class="occasions__help-title">Not sure which boat suits you?</div>
+          <p class="occasions__help-sub">We have boats for up to 90, 235 or 620 guests. Tell us your numbers and date, and we'll recommend the right one.</p>
+        </div>
+        <a class="btn btn--primary" href="#enquire" data-occasion="">Get a recommendation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHRISTMAS PARTIES ===== -->
+  <section class="christmas" id="christmas">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__eyebrow">December on the Thames</span>
+        <h2 class="section-header__title">Christmas Parties Afloat</h2>
+        <hr class="section-header__rule">
+      </div>
+      <div class="christmas__grid">
+        <div class="christmas-card christmas-card--featured fade-in">
+          <span class="christmas-card__badge">Most Popular</span>
+          <h3 class="christmas-card__title">Exclusive Festive Charters</h3>
+          <p class="christmas-card__text">Take an entire vessel for your company or family. A private floating venue dressed for the season and tailored entirely to you.</p>
+          <div class="christmas-card__features">
+            <div class="christmas-card__feature">Whole-boat exclusive hire</div>
+            <div class="christmas-card__feature">Bespoke menus and bar packages</div>
+            <div class="christmas-card__feature">Themed styling and entertainment</div>
+            <div class="christmas-card__feature">Mulled wine on arrival</div>
+          </div>
+          <a href="#enquire" class="btn btn--gold">Enquire for Your Party</a>
+        </div>
+        <div class="christmas-card fade-in">
+          <h3 class="christmas-card__title">Shared Christmas Parties</h3>
+          <p class="christmas-card__text">Join fellow revellers for a joinable festive night. Ideal for smaller teams and groups who want the full party atmosphere without booking a whole boat.</p>
+          <div class="christmas-card__features">
+            <div class="christmas-card__feature">Festive three-course dinner</div>
+            <div class="christmas-card__feature">DJ and dancing till late</div>
+            <div class="christmas-card__feature">Welcome mulled wine</div>
+            <div class="christmas-card__feature">London's glittering skyline</div>
+          </div>
+          <a href="#enquire" class="btn btn--gold">Check Festive Dates</a>
+        </div>
+      </div>
+      <p class="christmas__note fade-in">Prime December dates book months ahead. Secure yours with just a 25% deposit.</p>
+    </div>
+  </section>
+
+  <!-- ===== WINTER SALE BANNER ===== -->
+  <section class="sale-banner">
+    <div class="container fade-in">
+      <div class="sale-banner__eyebrow">Limited Time, Winter Sale</div>
+      <h2 class="sale-banner__title">Up to 20% off midweek charters</h2>
+      <p class="sale-banner__text">Book Monday to Thursday and save. Secure your date with just a 25% deposit, balance due closer to your event.</p>
+      <div class="sale-banner__code">TLC-2026-SALE</div>
+      <br>
+      <a href="#enquire" class="btn btn--gold btn--lg">Claim This Offer</a>
+    </div>
+  </section>
+
+  <!-- ===== GOOGLE REVIEWS ===== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__eyebrow">Loved by Our Guests</span>
+        <div class="reviews__badge">
+          <div class="reviews__badge-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="reviews__badge-text">4.8 <span>out of 5</span></div>
+          <div class="reviews__badge-google">from 134 Google reviews</div>
+        </div>
+        <h2 class="section-header__title">A reputation built since 1993</h2>
+        <hr class="section-header__rule">
+      </div>
+      <div class="reviews__grid">
+        <div class="review-card fade-in">
+          <div class="review-card__header">
+            <div class="review-card__avatar">YS</div>
+            <div>
+              <div class="review-card__name">Yousra Saleh</div>
+              <div class="review-card__meta">Corporate Event, The Elizabethan</div>
+            </div>
+          </div>
+          <div class="review-card__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-card__quote">I hosted my corporate event on the Elizabethan, and it was an absolute success. I organized everything remotely through email and WhatsApp, yet the team handled every detail perfectly. The food was fresh, hot, and delicious. An incredibly professional team!</p>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-card__header">
+            <div class="review-card__avatar">L</div>
+            <div>
+              <div class="review-card__name">Lorna</div>
+              <div class="review-card__meta">Wedding, The Elizabethan</div>
+            </div>
+          </div>
+          <div class="review-card__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-card__quote">We had such a glorious evening on the Elizabethan. Nothing was a bother in the planning process. In the month before, I took a backseat completely whilst the events team liaised directly with the vendors. On the day everything went completely smoothly.</p>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-card__header">
+            <div class="review-card__avatar">RS</div>
+            <div>
+              <div class="review-card__name">Rebecca Sheppard</div>
+              <div class="review-card__meta">Team Event, The Dixie Queen</div>
+            </div>
+          </div>
+          <div class="review-card__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-card__quote">We recently hosted a team event aboard the Dixie Queen and had a fantastic experience from start to finish. The BBQ food was absolutely amazing and received great feedback from everyone. We wouldn't hesitate to recommend TLC for corporate events!</p>
+        </div>
+      </div>
+      <div class="reviews__cta fade-in">
+        <a href="https://www.google.com/search?q=thamesluxurycharters+reviews#lrd=0x4876034645d2c697:0x2ad56756f781fae8,1,,,," target="_blank" rel="noopener" class="reviews__link">Read all 134 reviews on Google &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__eyebrow">Common Questions</span>
+        <h2 class="section-header__title">Frequently asked questions</h2>
+        <hr class="section-header__rule">
+      </div>
+      <div class="faq__list">
+        <div class="faq-item faq-item--open fade-in">
+          <button class="faq-item__question" aria-expanded="true">
+            Where do we board?
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">All charters depart from Butler's Wharf Pier, Shad Thames, London SE1 2YE. It's a short walk from London Bridge and Tower Hill stations, and moments from the City and Canary Wharf.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__question" aria-expanded="false">
+            What's included in the charter price?
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">Every charter includes exclusive hire of the vessel, a dedicated event manager, an experienced in-house crew, and on-board catering from FoodbyDish with matched fine wines. Entertainment upgrades (DJ, live music, photo booth) and the Tower Bridge lift are available as add-ons.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__question" aria-expanded="false">
+            How far in advance should we book?
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">We recommend booking at least 2 to 3 months ahead for most events. For December and peak summer dates, 4 to 6 months is advisable. You can secure your date with just a 25% deposit.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__question" aria-expanded="false">
+            Can we bring our own entertainment or decorations?
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">Absolutely. Your event manager will work with your suppliers to coordinate everything, from florists to live bands. We also have our own in-house entertainment packages if you'd prefer us to handle it.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__question" aria-expanded="false">
+            What happens if the weather is bad?
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">All three vessels have heated, enclosed interiors with full event facilities, so your party goes ahead regardless of the weather. The Elizabethan and Edwardian also have covered and open deck areas, giving guests the option to step outside when conditions allow.</div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-item__question" aria-expanded="false">
+            Which boat is right for our event?
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">The Dixie Queen suits large celebrations (up to 620 guests), the Elizabethan is ideal for weddings and mid-sized parties (up to 235), and the Edwardian is perfect for intimate dinners and exclusive gatherings (up to 90). Send us an enquiry and your event manager will recommend the best fit.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENQUIRY FORM ===== -->
+  <section class="enquiry" id="enquire">
+    <div class="container">
+      <div class="enquiry__layout">
+        <div class="enquiry__info fade-in">
+          <h2 class="enquiry__info-title">Begin your journey on the Thames</h2>
+          <p class="enquiry__info-text">Tell us about your occasion and our charter team will craft a tailored proposal, usually within one working day. No obligation, just possibilities.</p>
+          <div class="enquiry__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.49a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+            <a href="tel:02073577751">+44 (0)20 7357 7751</a>
+          </div>
+          <div class="enquiry__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:sales@thamesluxurycharters.co.uk">sales@thamesluxurycharters.co.uk</a>
+          </div>
+          <div class="enquiry__contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Butler's Wharf Pier, Shad Thames, London SE1 2YE
+          </div>
+          <div class="enquiry__promise">
+            <p><strong>Our promise:</strong> We respond within one working day. Your details are never shared with third parties.</p>
+          </div>
+        </div>
+        <form class="form fade-in" id="enquiry-form" novalidate>
+
+          <!-- Attribution: filled in by script from the ad click URL -->
+          <input type="hidden" name="gclid" id="f-gclid">
+          <input type="hidden" name="gbraid" id="f-gbraid">
+          <input type="hidden" name="wbraid" id="f-wbraid">
+          <input type="hidden" name="utm_source" id="f-utm_source">
+          <input type="hidden" name="utm_medium" id="f-utm_medium">
+          <input type="hidden" name="utm_campaign" id="f-utm_campaign">
+          <input type="hidden" name="utm_term" id="f-utm_term">
+          <input type="hidden" name="utm_content" id="f-utm_content">
+          <input type="hidden" name="landing_page" id="f-landing_page">
+          <input type="hidden" name="referrer" id="f-referrer">
+          <input type="hidden" name="consent_marketing" id="f-consent_marketing">
+
+          <!-- Spam trap: real people never see or fill this -->
+          <div class="form__hp" aria-hidden="true">
+            <label for="f-company-website">Leave this empty</label>
+            <input type="text" id="f-company-website" name="company_website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="first-name">First name *</label>
+              <input class="form__input" type="text" id="first-name" name="first_name" placeholder="First name" autocomplete="given-name" required aria-describedby="err-first-name">
+              <span class="form__error" id="err-first-name" hidden>Please enter your first name.</span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="last-name">Last name *</label>
+              <input class="form__input" type="text" id="last-name" name="last_name" placeholder="Last name" autocomplete="family-name" required aria-describedby="err-last-name">
+              <span class="form__error" id="err-last-name" hidden>Please enter your last name.</span>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="email">Email *</label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" inputmode="email" required aria-describedby="err-email">
+              <span class="form__error" id="err-email" hidden>Please enter a valid email address, like name@company.com.</span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="phone">Phone number</label>
+              <input class="form__input" type="tel" id="phone" name="phone" placeholder="020 1234 5678" autocomplete="tel" inputmode="tel">
+            </div>
+          </div>
+          <div class="form__row form__row--full">
+            <div class="form__group">
+              <label class="form__label" for="occasion">What's the occasion?</label>
+              <select class="form__select" id="occasion" name="occasion">
+                <option value="">Select occasion</option>
+                <option value="christmas">Christmas party</option>
+                <option value="corporate">Corporate or team event</option>
+                <option value="wedding">Wedding</option>
+                <option value="party">Party or celebration</option>
+                <option value="private-dining">Private dining</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="guests">Number of guests</label>
+              <input class="form__input" type="number" id="guests" name="guests" placeholder="e.g. 100" min="1" max="620">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="event-date">Preferred date</label>
+              <input class="form__input" type="date" id="event-date" name="event_date">
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="budget">Estimated budget</label>
+              <select class="form__select" id="budget" name="budget">
+                <option value="" disabled selected>Select budget</option>
+                <option value="2000-5000">&pound;2,000 &ndash; &pound;5,000</option>
+                <option value="5000-10000">&pound;5,000 &ndash; &pound;10,000</option>
+                <option value="10000-20000">&pound;10,000 &ndash; &pound;20,000</option>
+                <option value="20000-40000">&pound;20,000 &ndash; &pound;40,000</option>
+                <option value="40000+">&pound;40,000+</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="promo">Promo code</label>
+              <input class="form__input" type="text" id="promo" name="promo_code" placeholder="e.g. TLC-2026-SALE">
+            </div>
+          </div>
+          <div class="form__row form__row--full">
+            <div class="form__group">
+              <label class="form__label" for="message">Tell us about your event</label>
+              <textarea class="form__textarea" id="message" name="message" placeholder="Occasion, ideas, anything you'd like us to know..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg form__submit" id="form-submit">Send Enquiry</button>
+          <div class="form__status" id="form-status" role="alert" aria-live="polite" hidden></div>
+          <p class="form__note">We respond within one working day. Your details are never shared.</p>
+        </form>
+
+        <div class="form-success" id="form-success" tabindex="-1" hidden>
+          <div class="form-success__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <h3 class="form-success__title">Thank you, your enquiry is on its way</h3>
+          <p class="form-success__text">Our charter team will reply within one working day with a tailored proposal. If your date is close, call us on <strong>020 7357 7751</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST FOOTER ===== -->
+  <div class="trust-footer">
+    <div class="container">
+      <div class="trust-footer__inner">
+        <div class="trust-footer__item">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          Fully Licensed &amp; Insured
+        </div>
+        <div class="trust-footer__item">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          Experienced In-House Crew
+        </div>
+        <div class="trust-footer__item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Central London Piers
+        </div>
+        <div class="trust-footer__item">
+          <svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7z"/></svg>
+          Bespoke Catering Partners
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <img class="footer__logo" src="data:image/png;base64,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" alt="Thames Luxury Charters" width="190" height="184" loading="lazy">
+      <p>The No.1 choice for private event charters on the River Thames since 1993.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/tlclondon/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/thamesluxurycharters" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/2481522" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+      <p>
+        <a href="https://thamesluxurycharters.co.uk/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://thamesluxurycharters.co.uk/terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+        &nbsp;&middot;&nbsp;
+        <a href="#" data-consent="manage">Cookie settings</a>
+      </p>
+      <p style="margin-top:12px;">&copy; 2026 Thames Luxury Charters. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY MOBILE CTA ===== -->
+  <div class="mobile-cta">
+    <div class="mobile-cta__inner">
+      <a href="tel:02073577751" class="mobile-cta__btn mobile-cta__btn--call">
+        <svg class="mobile-cta__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.49a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+        Call Us
+      </a>
+      <a href="#enquire" class="mobile-cta__btn mobile-cta__btn--enquire">
+        <svg class="mobile-cta__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Enquire Now
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </button>
+
+  <!-- ===== COOKIE CONSENT ===== -->
+  <div class="cookie-bar" id="cookie-bar" role="region" aria-label="Cookie consent" hidden>
+    <div class="cookie-bar__inner">
+      <p class="cookie-bar__text">
+        <strong>Your privacy.</strong> We use essential cookies to make this page work. With your permission we'd also use analytics and advertising cookies to understand how the page is used and to measure our ads. You can change your mind at any time. <a href="https://thamesluxurycharters.co.uk/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+      </p>
+      <div class="cookie-bar__actions">
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--accept" data-consent="accept">Accept all</button>
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--accept" data-consent="reject">Reject all</button>
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--link" data-consent="manage">Manage choices</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-modal" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" hidden>
+    <div class="cookie-modal__panel">
+      <h2 class="cookie-modal__title" id="cookie-modal-title">Cookie preferences</h2>
+      <p class="cookie-modal__intro">Choose which cookies we can use. Essential cookies are always on because the page needs them to work.</p>
+
+      <div class="cookie-modal__row">
+        <div class="cookie-modal__info">
+          <div class="cookie-modal__name">Essential</div>
+          <div class="cookie-modal__desc">Remember your cookie choice and keep the enquiry form secure.</div>
+        </div>
+        <span class="cookie-modal__always">Always on</span>
+      </div>
+
+      <div class="cookie-modal__row">
+        <div class="cookie-modal__info">
+          <label class="cookie-modal__name" for="consent-analytics">Analytics</label>
+          <div class="cookie-modal__desc">Google Analytics: anonymous visit counts and how people use the page.</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="consent-analytics" class="switch__input">
+          <span class="switch__track" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <div class="cookie-modal__row">
+        <div class="cookie-modal__info">
+          <label class="cookie-modal__name" for="consent-marketing">Advertising</label>
+          <div class="cookie-modal__desc">Google Ads: measure which ads lead to enquiries and show relevant ads elsewhere.</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="consent-marketing" class="switch__input">
+          <span class="switch__track" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <div class="cookie-modal__actions">
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--accept" data-consent="save">Save choices</button>
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--outline" data-consent="accept">Accept all</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* ---- Sticky header shadow ---- */
+      var header = document.getElementById('header');
+      var scrolled = false;
+
+      function onScroll() {
+        var shouldScroll = window.scrollY > 20;
+        if (shouldScroll !== scrolled) {
+          scrolled = shouldScroll;
+          header.classList.toggle('header--scrolled', scrolled);
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---- Smooth scroll for anchor links ---- */
+      document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var href = this.getAttribute('href');
+          if (!href || href === '#' || this.hasAttribute('data-consent')) return;
+          var target = null;
+          try { target = document.querySelector(href); } catch (err) {}
+          if (target) {
+            e.preventDefault();
+            var headerH = header.offsetHeight;
+            var top = target.getBoundingClientRect().top + window.scrollY - headerH - 12;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+      /* ---- Fade-in on scroll ---- */
+      if ('IntersectionObserver' in window) {
+        var fadeEls = document.querySelectorAll('.fade-in');
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in--visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        fadeEls.forEach(function(el) { observer.observe(el); });
+      } else {
+        document.querySelectorAll('.fade-in').forEach(function(el) {
+          el.classList.add('fade-in--visible');
+        });
+      }
+
+      /* ---- FAQ Accordion ---- */
+      document.querySelectorAll('.faq-item__question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item = this.closest('.faq-item');
+          var isOpen = item.classList.contains('faq-item--open');
+
+          // Close all others
+          document.querySelectorAll('.faq-item--open').forEach(function(openItem) {
+            openItem.classList.remove('faq-item--open');
+            openItem.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+          });
+
+          // Toggle current
+          if (!isOpen) {
+            item.classList.add('faq-item--open');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      /* ---- Dark mode toggle ---- */
+      var darkToggle = document.getElementById('dark-toggle');
+      if (darkToggle) {
+        // Check saved preference
+        try {
+          var saved = localStorage.getItem('tlc-theme');
+          if (saved === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch(e) {}
+
+        darkToggle.addEventListener('click', function() {
+          var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          if (isDark) {
+            document.documentElement.removeAttribute('data-theme');
+            try { localStorage.setItem('tlc-theme', 'light'); } catch(e) {}
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            try { localStorage.setItem('tlc-theme', 'dark'); } catch(e) {}
+          }
+        });
+      }
+
+      /* ---- Back to top ---- */
+      var backToTop = document.getElementById('back-to-top');
+      var bttVisible = false;
+
+      function checkBackToTop() {
+        var shouldShow = window.scrollY > 500;
+        if (shouldShow !== bttVisible) {
+          bttVisible = shouldShow;
+          backToTop.classList.toggle('back-to-top--visible', bttVisible);
+        }
+      }
+
+      window.addEventListener('scroll', checkBackToTop, { passive: true });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      var CFG = window.TLC_CONFIG || {};
+      var DAY = 24 * 60 * 60 * 1000;
+      window.dataLayer = window.dataLayer || [];
+
+      function store(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+      function load(key) { try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; } }
+      function drop(key) { try { localStorage.removeItem(key); } catch (e) {} }
+
+      /* =====================================================
+         COOKIE CONSENT  (Consent Mode v2)
+         ===================================================== */
+      var CONSENT_KEY = 'tlc-consent';
+      var cookieBar = document.getElementById('cookie-bar');
+      var cookieModal = document.getElementById('cookie-modal');
+      var chkAnalytics = document.getElementById('consent-analytics');
+      var chkMarketing = document.getElementById('consent-marketing');
+      var modalOpener = null;
+
+      function readConsent() {
+        var c = load(CONSENT_KEY);
+        if (c && c.v === CFG.consentVersion && (Date.now() - c.ts) < 365 * DAY) return c;
+        return null;
+      }
+
+      var consent = readConsent();
+      var hasChoice = !!consent;
+      if (!consent) consent = { analytics: false, marketing: false };
+
+      if (!hasChoice) cookieBar.hidden = false;
+
+      function saveConsent(analytics, marketing) {
+        consent = { v: CFG.consentVersion, analytics: !!analytics, marketing: !!marketing, ts: Date.now() };
+        store(CONSENT_KEY, consent);
+
+        gtag('consent', 'update', {
+          analytics_storage: consent.analytics ? 'granted' : 'denied',
+          ad_storage: consent.marketing ? 'granted' : 'denied',
+          ad_user_data: consent.marketing ? 'granted' : 'denied',
+          ad_personalization: consent.marketing ? 'granted' : 'denied'
+        });
+        dataLayer.push({
+          event: 'consent_update',
+          consent_analytics: consent.analytics,
+          consent_marketing: consent.marketing
+        });
+
+        if (consent.marketing) persistAttribution(); else drop(ATTR_KEY);
+        fillAttribution();
+        onHeroConsentChange();
+
+        cookieBar.hidden = true;
+        closeModal();
+      }
+
+      function openModal(opener) {
+        modalOpener = opener || null;
+        chkAnalytics.checked = !!consent.analytics;
+        chkMarketing.checked = !!consent.marketing;
+        cookieModal.hidden = false;
+        chkAnalytics.focus();
+      }
+
+      function closeModal() {
+        if (cookieModal.hidden) return;
+        cookieModal.hidden = true;
+        if (modalOpener && document.body.contains(modalOpener)) modalOpener.focus();
+        modalOpener = null;
+      }
+
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest('[data-consent]');
+        if (!el) return;
+        var action = el.getAttribute('data-consent');
+        if (action === 'accept') saveConsent(true, true);
+        else if (action === 'reject') saveConsent(false, false);
+        else if (action === 'save') saveConsent(chkAnalytics.checked, chkMarketing.checked);
+        else if (action === 'manage') { e.preventDefault(); openModal(el); }
+      });
+
+      /* close modal on backdrop click or Escape (choice unchanged) */
+      cookieModal.addEventListener('click', function (e) { if (e.target === cookieModal) closeModal(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+        /* keep Tab inside the open modal */
+        if (e.key === 'Tab' && !cookieModal.hidden) {
+          var f = cookieModal.querySelectorAll('input, button');
+          var first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+
+      /* =====================================================
+         AD CLICK ATTRIBUTION  (gclid / gbraid / wbraid / UTMs)
+         Always read from the landing URL. Only remembered across
+         visits (90 days) when advertising cookies are allowed.
+         ===================================================== */
+      var ATTR_KEY = 'tlc-attr';
+      var ATTR_FIELDS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+      var urlAttr = (function () {
+        var out = {};
+        try {
+          var p = new URLSearchParams(window.location.search);
+          ATTR_FIELDS.forEach(function (k) {
+            var v = p.get(k);
+            if (v) out[k] = v.slice(0, 500);
+          });
+        } catch (e) {}
+        return out;
+      })();
+
+      function hasKeys(o) { return o && Object.keys(o).length > 0; }
+
+      function persistAttribution() {
+        if (hasKeys(urlAttr)) store(ATTR_KEY, { ts: Date.now(), data: urlAttr });
+      }
+
+      function currentAttribution() {
+        if (hasKeys(urlAttr)) return urlAttr;
+        if (consent.marketing) {
+          var s = load(ATTR_KEY);
+          if (s && (Date.now() - s.ts) < 90 * DAY) return s.data || {};
+        }
+        return {};
+      }
+
+      function setField(id, val) {
+        var el = document.getElementById(id);
+        if (el) el.value = val == null ? '' : String(val);
+      }
+
+      function fillAttribution() {
+        var a = currentAttribution();
+        ATTR_FIELDS.forEach(function (k) { setField('f-' + k, a[k] || ''); });
+        setField('f-landing_page', window.location.href.split('#')[0]);
+        setField('f-referrer', document.referrer || '');
+        setField('f-consent_marketing', consent.marketing ? 'granted' : 'denied');
+      }
+
+      if (consent.marketing) persistAttribution();
+      fillAttribution();
+
+      /* =====================================================
+         ENGAGEMENT EVENTS  (for GA4 / Google Ads via GTM)
+         ===================================================== */
+      function locationOf(el) {
+        if (el.closest('.mobile-cta')) return 'sticky_bar';
+        if (el.closest('.header')) return 'header';
+        if (el.closest('.footer')) return 'footer';
+        var s = el.closest('section');
+        if (!s) return 'page';
+        return s.id || (s.className || '').split(' ')[0] || 'section';
+      }
+
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        var text = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
+
+        if (href.indexOf('tel:') === 0) {
+          dataLayer.push({ event: 'phone_click', link_location: locationOf(a), link_text: text });
+        } else if (href.indexOf('mailto:') === 0) {
+          dataLayer.push({ event: 'email_click', link_location: locationOf(a) });
+        } else if (href === '#enquire') {
+          dataLayer.push({ event: 'cta_click', cta_text: text, link_location: locationOf(a) });
+        }
+      });
+
+      /* =====================================================
+         HERO VIDEO
+         Order: 1) self-hosted clip (loads first, for everyone)
+                2) YouTube background (lazy, desktop/tablet, needs ad consent)
+                3) poster image (always there underneath)
+         ===================================================== */
+      var heroWrap = document.querySelector('.hero__video-wrap');
+      var heroVideo = document.getElementById('hero-video');
+      var heroYtBox = document.getElementById('hero-yt');
+      var heroYtFrame = null;
+      var heroYtWanted = false;   /* YouTube is the chosen source, waiting on consent/load */
+      var heroInView = true;
+      var YT_ORIGIN = 'https://www.youtube-nocookie.com';
+
+      function motionAllowed() {
+        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+        var c = navigator.connection;
+        if (c && (c.saveData || /(^|-)2g$/.test(c.effectiveType || ''))) return false;
+        return true;
+      }
+
+      function afterPageLoad(fn) {
+        var idle = window.requestIdleCallback || function (f) { return setTimeout(f, 300); };
+        if (document.readyState === 'complete') idle(fn, { timeout: 2000 });
+        else window.addEventListener('load', function () { idle(fn, { timeout: 2000 }); });
+      }
+
+      /* ---- 1. Self-hosted: starts loading straight away ---- */
+      function startSelfHosted() {
+        var sources = [];
+        if (CFG.heroVideoWebm) sources.push([CFG.heroVideoWebm, 'video/webm']);
+        if (CFG.heroVideoMp4) sources.push([CFG.heroVideoMp4, 'video/mp4']);
+
+        sources.forEach(function (s, i) {
+          var el = document.createElement('source');
+          el.src = s[0];
+          el.type = s[1];
+          if (i === sources.length - 1) {
+            /* every source failed: drop the video and fall back to YouTube */
+            el.addEventListener('error', function () {
+              if (heroVideo) { heroVideo.remove(); heroVideo = null; }
+              chooseYoutube();
+            });
+          }
+          heroVideo.appendChild(el);
+        });
+
+        heroVideo.preload = 'auto';
+        heroVideo.autoplay = true;
+        heroVideo.addEventListener('playing', function () {
+          heroVideo.classList.add('hero__video--playing');
+        }, { once: true });
+
+        heroVideo.load();
+        var p = heroVideo.play();
+        if (p && p.catch) p.catch(function () { /* autoplay blocked: poster stays */ });
+      }
+
+      /* ---- 2. YouTube background ---- */
+      function youtubeSuitable() {
+        return !!CFG.heroYoutubeId && window.matchMedia && matchMedia('(min-width: 768px)').matches;
+      }
+
+      function chooseYoutube() {
+        if (!youtubeSuitable()) return;
+        heroYtWanted = true;
+        if (consent.marketing) afterPageLoad(startYoutube);
+      }
+
+      function ytCommand(func, args) {
+        if (!heroYtFrame || !heroYtFrame.contentWindow) return;
+        heroYtFrame.contentWindow.postMessage(JSON.stringify({
+          event: 'command', func: func, args: args || [], id: 'hero-yt', channel: 'widget'
+        }), YT_ORIGIN);
+      }
+
+      function onYtMessage(e) {
+        if (!heroYtFrame || e.origin !== YT_ORIGIN || e.source !== heroYtFrame.contentWindow) return;
+        var data;
+        try { data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch (err) { return; }
+        if (!data) return;
+        var state = null;
+        if (data.event === 'onStateChange') state = data.info;
+        else if (data.event === 'infoDelivery' && data.info && typeof data.info.playerState === 'number') state = data.info.playerState;
+        else if (data.event === 'onReady') ytCommand('addEventListener', ['onStateChange']);
+
+        /* 1 = playing: only now reveal it, so no YouTube spinner/UI ever shows */
+        if (state === 1) {
+          heroYtBox.classList.add('hero__yt--playing');
+          if (!heroInView) ytCommand('pauseVideo');
+        }
+      }
+
+      function startYoutube() {
+        if (heroYtFrame || !heroYtWanted || !consent.marketing) return;
+        var id = encodeURIComponent(CFG.heroYoutubeId);
+        var params = [
+          'autoplay=1', 'mute=1', 'controls=0', 'loop=1', 'playlist=' + id,
+          'playsinline=1', 'rel=0', 'modestbranding=1', 'iv_load_policy=3',
+          'disablekb=1', 'fs=0', 'enablejsapi=1'
+        ];
+        if (window.location.origin && window.location.origin !== 'null') {
+          params.push('origin=' + encodeURIComponent(window.location.origin));
+        }
+
+        heroYtFrame = document.createElement('iframe');
+        heroYtFrame.src = YT_ORIGIN + '/embed/' + id + '?' + params.join('&');
+        heroYtFrame.title = 'Background video of the Thames Luxury Charters fleet';
+        heroYtFrame.allow = 'autoplay; encrypted-media';
+        heroYtFrame.tabIndex = -1;
+        heroYtFrame.setAttribute('aria-hidden', 'true');
+
+        /* ask the player to report its state (retries until it answers) */
+        var tries = 0;
+        function hello() {
+          if (!heroYtFrame || heroYtBox.classList.contains('hero__yt--playing') || tries++ > 30) return;
+          if (heroYtFrame.contentWindow) {
+            heroYtFrame.contentWindow.postMessage(JSON.stringify({ event: 'listening', id: 'hero-yt', channel: 'widget' }), YT_ORIGIN);
+            ytCommand('addEventListener', ['onStateChange']);
+          }
+          setTimeout(hello, 300);
+        }
+        heroYtFrame.addEventListener('load', hello);
+
+        heroYtBox.appendChild(heroYtFrame);
+      }
+
+      function stopYoutube() {
+        if (!heroYtFrame) return;
+        heroYtBox.classList.remove('hero__yt--playing');
+        heroYtFrame.remove();
+        heroYtFrame = null;
+      }
+
+      /* called from saveConsent(): start on Accept, remove on withdrawal */
+      function onHeroConsentChange() {
+        if (!heroYtWanted) return;
+        if (consent.marketing) afterPageLoad(startYoutube);
+        else stopYoutube();
+      }
+
+      window.addEventListener('message', onYtMessage);
+
+      /* pause whichever video is running while the hero is off-screen */
+      if ('IntersectionObserver' in window && heroWrap) {
+        new IntersectionObserver(function (entries) {
+          heroInView = entries[0].isIntersecting;
+          if (heroVideo && heroVideo.classList.contains('hero__video--playing')) {
+            heroInView ? heroVideo.play().catch(function () {}) : heroVideo.pause();
+          }
+          if (heroYtFrame) ytCommand(heroInView ? 'playVideo' : 'pauseVideo');
+        }).observe(heroWrap);
+      }
+
+      /* ---- pick the source ---- */
+      var hasSelfHosted = !!(CFG.heroVideoMp4 || CFG.heroVideoWebm);
+      if (!hasSelfHosted && heroVideo) { heroVideo.remove(); heroVideo = null; }
+
+      if (motionAllowed()) {
+        if (heroVideo && hasSelfHosted) startSelfHosted();
+        else chooseYoutube();
+      }
+
+      /* =====================================================
+         YOUTUBE FACADES  (nothing loads from YouTube until play)
+         ===================================================== */
+      document.querySelectorAll('.yt-facade').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-yt-id');
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) +
+                       '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+          iframe.title = btn.getAttribute('data-yt-title') || 'Video';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          btn.replaceWith(iframe);
+          iframe.focus();
+          dataLayer.push({ event: 'video_play', video_id: id });
+        });
+      });
+
+      /* =====================================================
+         OCCASIONS: pre-fill the form's Occasion field
+         ===================================================== */
+      var occSection = document.getElementById('occasions');
+
+      if (occSection) occSection.addEventListener('click', function (e) {
+        var link = e.target.closest('[data-occasion]');
+        if (!link) return;
+        var occasion = link.getAttribute('data-occasion');
+
+        /* pre-select the occasion in the enquiry form, if it has the field */
+        var field = document.getElementById('occasion');
+        if (field && occasion) {
+          field.value = occasion;
+          field.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+
+        /* analytics: which occasion drives the click */
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'occasion_click',
+          occasion: occasion || 'not_sure',
+          link_location: 'occasions'
+        });
+      });
+
+      /* =====================================================
+         ENQUIRY FORM
+         ===================================================== */
+      var form = document.getElementById('enquiry-form');
+      var submitBtn = document.getElementById('form-submit');
+      var statusBox = document.getElementById('form-status');
+      var successBox = document.getElementById('form-success');
+      var submitting = false;
+      var formStarted = false;
+
+      if (!CFG.formEndpoint) {
+        if (window.console) console.warn('[TLC] TLC_CONFIG.formEndpoint is empty: enquiries will not be sent.');
+      }
+
+      var RULES = [
+        { id: 'first-name', test: function (v) { return v.length > 0; } },
+        { id: 'last-name',  test: function (v) { return v.length > 0; } },
+        { id: 'email',      test: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); } }
+      ];
+
+      function setError(input, show) {
+        var err = document.getElementById('err-' + input.id);
+        input.classList.toggle('form__input--invalid', show);
+        input.setAttribute('aria-invalid', show ? 'true' : 'false');
+        if (err) err.hidden = !show;
+      }
+
+      function validate() {
+        var firstBad = null;
+        RULES.forEach(function (r) {
+          var input = document.getElementById(r.id);
+          var ok = r.test(input.value.trim());
+          setError(input, !ok);
+          if (!ok && !firstBad) firstBad = input;
+        });
+        return firstBad;
+      }
+
+      /* clear a field's error as soon as it's fixed */
+      RULES.forEach(function (r) {
+        var input = document.getElementById(r.id);
+        input.addEventListener('input', function () {
+          if (input.classList.contains('form__input--invalid') && r.test(input.value.trim())) setError(input, false);
+        });
+      });
+
+      form.addEventListener('focusin', function () {
+        if (formStarted) return;
+        formStarted = true;
+        dataLayer.push({ event: 'form_start', form_id: 'tlc_enquiry' });
+      });
+
+      function showStatus(html) {
+        statusBox.innerHTML = html;
+        statusBox.hidden = false;
+      }
+
+      function toE164(phone) {
+        var p = (phone || '').replace(/[^\d+]/g, '');
+        if (!p) return '';
+        if (p.indexOf('+') === 0) return p;
+        if (p.indexOf('00') === 0) return '+' + p.slice(2);
+        if (p.indexOf('44') === 0) return '+' + p;
+        if (p.indexOf('0') === 0) return '+44' + p.slice(1);
+        return p;
+      }
+
+      function onSuccess(values) {
+        var lead = {
+          event: 'generate_lead',
+          form_id: 'tlc_enquiry',
+          occasion: values.occasion || undefined,
+          guests: values.guests || undefined,
+          budget: values.budget || undefined,
+          event_date: values.event_date || undefined,
+          promo_code: values.promo_code || undefined
+        };
+        /* Enhanced Conversions data, only with advertising consent */
+        if (consent.marketing) {
+          lead.user_data = {
+            email: values.email.trim().toLowerCase(),
+            phone_number: toE164(values.phone) || undefined,
+            address: { first_name: values.first_name.trim(), last_name: values.last_name.trim() }
+          };
+        }
+
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          if (CFG.thankYouUrl) {
+            window.location.href = CFG.thankYouUrl;
+          } else {
+            form.hidden = true;
+            successBox.hidden = false;
+            successBox.focus();
+            var top = successBox.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 24;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        }
+
+        /* give tags a moment to fire before redirecting */
+        lead.eventCallback = finish;
+        lead.eventTimeout = 1500;
+        dataLayer.push(lead);
+        setTimeout(finish, CFG.thankYouUrl ? 1500 : 0);
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (submitting) return;
+        statusBox.hidden = true;
+
+        var firstBad = validate();
+        if (firstBad) { firstBad.focus(); return; }
+
+        /* spam trap filled: act as if sent, send nothing */
+        if (document.getElementById('f-company-website').value) {
+          form.hidden = true;
+          successBox.hidden = false;
+          return;
+        }
+
+        if (!CFG.formEndpoint) {
+          showStatus('This form isn\'t connected yet, so your enquiry hasn\'t been sent. Please call <strong>020 7357 7751</strong> or email <strong>sales@thamesluxurycharters.co.uk</strong>.');
+          dataLayer.push({ event: 'form_error', form_id: 'tlc_enquiry', error_type: 'not_configured' });
+          return;
+        }
+
+        fillAttribution();
+        var fd = new FormData(form);
+        fd.delete('company_website');
+        fd.append('submitted_at', new Date().toISOString());
+
+        var values = {};
+        fd.forEach(function (v, k) { values[k] = v; });
+        var body = new URLSearchParams(fd);
+
+        submitting = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        var ctrl = ('AbortController' in window) ? new AbortController() : null;
+        var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 15000) : null;
+
+        fetch(CFG.formEndpoint, {
+          method: 'POST',
+          body: body,
+          headers: { 'Accept': 'application/json' },
+          signal: ctrl ? ctrl.signal : undefined
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            onSuccess(values);
+          })
+          .catch(function (err) {
+            showStatus('Sorry, we couldn\'t send your enquiry just now. Please try again, or call <strong>020 7357 7751</strong> or email <strong>sales@thamesluxurycharters.co.uk</strong>.');
+            dataLayer.push({ event: 'form_error', form_id: 'tlc_enquiry', error_type: (err && err.name === 'AbortError') ? 'timeout' : 'network' });
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Enquiry';
+            submitting = false;
+          })
+          .then(function () { if (timer) clearTimeout(timer); });
+      });
+    })();
+  </script>
+
+</body>
+</html>
