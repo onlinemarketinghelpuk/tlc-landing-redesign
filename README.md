@@ -4,7 +4,8 @@ Static site (HTML, CSS, vanilla JS). No build step.
 
 ```
 tlc-landing/
-├── index.html     the landing page
+├── index.html     the landing page (version A)
+├── v2.html        version B: form in the hero, main-site header (served at /v2)
 ├── 404.html       branded "page not found"
 ├── vercel.json    headers, caching, clean URLs
 ├── images/        put hosted images here (optional)
@@ -13,7 +14,7 @@ tlc-landing/
 
 ## Before launch
 
-Edit the `TLC_CONFIG` block near the top of `index.html`:
+Edit the `TLC_CONFIG` block near the top of **both** `index.html` and `v2.html`:
 
 | Setting          | What to set                                                        |
 |------------------|--------------------------------------------------------------------|
@@ -23,7 +24,7 @@ Edit the `TLC_CONFIG` block near the top of `index.html`:
 | `heroYoutubeId`  | YouTube video ID for the hero background                           |
 | `heroVideoMp4`   | `videos/hero.mp4` once the self-hosted clip is uploaded            |
 
-Also replace `GTM-XXXXXXX` in the `<noscript>` tag just after `<body>`.
+Also replace `GTM-XXXXXXX` in the `<noscript>` tag just after `<body>` (both files).
 
 ## Deploy (recommended: GitHub + Vercel)
 
@@ -74,3 +75,12 @@ Keep the clip under about 2 MB: 8 to 12 seconds, no audio, 1280px wide.
 - HTML is never cached, so changes show straight away after each deploy.
   Files in `videos/` and `images/` are cached for 30 days: give a replaced file
   a new name (e.g. `hero-v2.mp4`) so visitors get the new one.
+
+## A/B testing the two versions
+
+- Version A: `https://your-domain/`
+- Version B: `https://your-domain/v2`
+
+In Google Ads use **Experiments → Custom experiment** (or an ad variation that
+changes the final URL), split traffic 50/50, and compare conversions
+(`generate_lead`). Both pages send the same events, so reports line up.
